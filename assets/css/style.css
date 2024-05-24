@@ -64,9 +64,7 @@
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -76,11 +74,7 @@ li {
   list-style: none; 
 }
 
-a,
-img,
-span,
-button,
-ion-icon { 
+a, img, span, button, ion-icon { 
   display: block; 
 }
 
@@ -192,6 +186,79 @@ body.active {
   font-size: var(--fs-6); 
 }
 
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--jet-1);
+  overflow: hidden;
+}
+
+.has-before {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before {
+  content: "";
+  position: absolute;
+}
+
+.img-holder.has-before::before {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: var(--gradient-1);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-icon {
+  background-color: var(--bg-color, var(--white));
+  border-radius: var(--border-radius, var(--radius-circle));
+  display: grid;
+  place-content: center;
+  transition: var(--transition-2);
+}
+
+.btn-icon path { transition: var(--transition-2); }
+
+.btn-icon:is(:hover, :focus-visible) {
+  background-color: var(--hover-bg-color, var(--white));
+}
+
+.btn-icon:is(:hover, :focus-visible) path {
+  stroke: var(--hover-text-color, var(--black));
+}
+
+.section-subtitle {
+  color: var(--white_a25);
+  font-size: var(--fs-7);
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+}
+
+[data-reveal] {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: var(--transition-3);
+}
+
+[data-reveal="left"] { 
+  transform: translate(-50px, 0); 
+}
+
+[data-reveal="right"] { 
+  transform: translate(50px, 0); 
+}
+
+[data-reveal].revealed {
+  transform: translate(0, 0);
+  opacity: 1;
+}
 
 /*-----------------------------------*\
   #LOADING
@@ -258,7 +325,7 @@ body.active {
   box-shadow: var(--shadow);
 }
 
-.header .container {
+.header .container, .navbar-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -267,7 +334,7 @@ body.active {
 .navbar {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -280px;
   background-color: var(--eerie-black);
   height: 100vh;
   max-width: 280px;
@@ -281,12 +348,12 @@ body.active {
 
 .navbar.active {
   visibility: visible;
-  transform: traslateX(-280px);
+  transform: translateX(-280px);
   transition-duration: 0.5s;
 }
 
-.navbar-top .logo .img {
-  width: 130px;
+.navbar-top .logo .img { 
+  width: 130px; 
 }
 
 .nav-close-btn {
@@ -331,6 +398,47 @@ body.active {
   color: var(--radical-red); 
 }
 
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  background-color: var(--radical-red);
+  color: var(--white);
+  padding: 8px 30px;
+  border-radius: var(--radius-5);
+  margin-block-end: 50px;
+}
+
+.login-btn .span { 
+  font-weight: var(--fw-500); 
+}
+
+.navbar-title {
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  line-height: 1;
+  margin-block-end: 15px;
+}
+
+.navbar-text {
+  color: var(--white_a75);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-block-end: 15px;
+}
+
+.navbar .contact-link {
+  color: var(--radical-red);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+}
+
+.navbar .contact-link:is(:hover, :focus-visible) { 
+  text-decoration: underline; 
+}
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -371,7 +479,7 @@ body.active {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: traslateX(-50%);
+  transform: translateX(-50%);
   width: 300px;
   font-weight: inherit;
   display: flex;
@@ -379,13 +487,13 @@ body.active {
 
 .hero-text {
   font-size: var(--fs-10);
-  font-weight: var(--fs-300);
+  font-weight: var(--fw-300);
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 
-.hero .wrapper .space {
-  padding: 0.1em;
+.hero .wrapper .space { 
+  padding: 0.1em; 
 }
 
 .hero .wrapper :is(.in, .out) {
@@ -399,8 +507,8 @@ body.active {
   animation: textWave 0.2s ease reverse forwards;
 }
 
-.hero .wrapper .in {
-  animation: textWave 0.2s ease forwards;
+.hero .wrapper .in { 
+  animation: textWave 0.2s ease forwards; 
 }
 
 @keyframes textWave {
