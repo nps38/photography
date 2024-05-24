@@ -146,7 +146,51 @@ body.active {
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+.container { 
+  padding-inline: 15px; 
+}
 
+.shape { 
+  display: none; 
+}
+
+.section { 
+  padding-block: var(--section-padding); 
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--ff-recoleta);
+  line-height: 1.2;
+}
+
+.h1 {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-400);
+}
+
+.h2, .h3, .h4, .h5, .h6 { 
+  font-weight: var(--fw-300); 
+}
+
+.h2 { 
+  font-size: var(--fs-2); 
+}
+
+.h3 { 
+  font-size: var(--fs-3); 
+}
+
+.h4 { 
+  font-size: var(--fs-4); 
+}
+
+.h5 { 
+  font-size: var(--fs-5); 
+}
+
+.h6 { 
+  font-size: var(--fs-6); 
+}
 
 
 
@@ -164,6 +208,7 @@ body.active {
   z-index: 5;
   transform-origin: bottom;
   transition: 0.5s va(--cubic-in);
+  display: none;
 }
 
 .loading.loaded {
@@ -199,7 +244,9 @@ body.active {
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
-
+.navbar, .overlay {
+  display: none;
+}
 
 
 
