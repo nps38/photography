@@ -243,7 +243,7 @@ body.active {
 
 [data-reveal] {
   transform: translateY(50px);
-  opacity: 0;
+  /* opacity: 0; */
   transition: var(--transition-3);
 }
 
@@ -583,7 +583,7 @@ body.active {
   top: 0;
   left: 0;
   width: 100%;
-  opacity: 0;
+  /* opacity: 0; */
   visibility: hidden;
   animation-delay: 5s;
 }
