@@ -69,7 +69,7 @@ const setLetterEffect = function() {
         letterBoxes[i].textContent = "";
 
         //loop through all letters
-        for (let j=o; j<letters.length; j++) {
+        for (let j=0; j<letters.length; j++) {
             //create a span
             const span = document.createElement("span");
             //set animation delay on span
@@ -85,7 +85,7 @@ const setLetterEffect = function() {
             //pass curr letter into span
             span.textContent = letters[j];
             //add space class on span, when curr letter contain space
-            if (letter[j] === " ") span.classList.add("space");
+            if (letters[j] === " ") span.classList.add("space");
             //pass the span on current letter box
             letterBoxes[i].appendChild(span);
             //skip letterAnimationDelay when loop is in the last index
