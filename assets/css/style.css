@@ -352,10 +352,10 @@ body.active {
   transition-duration: 0.5s;
 }
 
-.navbar-top .logo .img { 
+/* .navbar-top .logo .img { 
   width: 130px; 
   border-radius: 50%;
-}
+} */
 
 .nav-close-btn {
   width: 25px;
