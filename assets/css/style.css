@@ -354,6 +354,7 @@ body.active {
 
 .navbar-top .logo .img { 
   width: 130px; 
+  border-radius: 50%;
 }
 
 .nav-close-btn {
