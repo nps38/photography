@@ -1419,7 +1419,7 @@ body.active {
    * GALLERY
    */
 
-  .gallery-list { gap: 50px; }
+  .gallery-list { gap: 0px 50px; }
 
   .gallery-card .card-title { font-weight: var(--fw-300); }
 
