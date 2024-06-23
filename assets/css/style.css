@@ -192,6 +192,11 @@ body.active {
   overflow: hidden;
 }
 
+.text-holder {
+  aspect-ratio: var(--width) / var(--height);
+  overflow: hidden;
+}
+
 .has-before {
   position: relative;
   z-index: 1;
