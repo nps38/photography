@@ -631,9 +631,13 @@ body.active {
   #PORTFOLIO
 \*-----------------------------------*/
 
-.portfolio { padding-block-end: 100px; }
+.portfolio { 
+  padding-block-end: 100px; 
+}
 
-.portfolio .section-title { margin-block-end: 60px; }
+.portfolio .section-title { 
+  margin-block-end: 60px;
+}
 
 .portfolio-card {
   position: relative;
