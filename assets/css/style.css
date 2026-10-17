@@ -125,7 +125,7 @@ body.active {
   outline-offset: 4px; 
 }
 
-::-webkit-scrollbar { 
+/* ::-webkit-scrollbar { 
   width: 5px; 
 }
 
@@ -135,7 +135,7 @@ body.active {
 
 ::-webkit-scrollbar-thumb { 
   background-color: var(--jet-2); 
-}
+} */
 
 /*-----------------------------------*\
   #REUSED STYLE
